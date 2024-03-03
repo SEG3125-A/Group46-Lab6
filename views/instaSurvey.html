@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>Questionnaire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+  </head>
+  
+  <body>
+	
+	<div class="container-md p-3 my-3 border bg-dark text-white" id="survey">
+    <h1>Survey</h1>
+    <form>
+      <h2> What is your overall experience with the Instagram site, in detail? </h2>
+      <input type="text" name="experience" required />
+      <br>
+      <br>
+      <h2> What do you think is the most user-friendly instagram feature among the below three? </h2>
+		  <input type="radio" name="feature" value="Stories"> Stories<br>
+		  <input type="radio" name="feature" value="Reels"> Reels<br>
+      <input type="radio" name="feature" value="Posts"> Posts<br>
+      <br>
+      <h2> Which of the following do you find to be distracting features in Instagram (you can choose multiple options)? </h2>
+		  <input type="checkbox" name="distraction" value="Advertisements"> Advertisements<br>
+		  <input type="checkbox" name="distraction" value="Suggested Posts/Reels"> Suggested Posts/Reels<br>
+      <input type="checkbox" name="distraction" value="Explore Page"> Explore Page<br>
+      <input type="checkbox" name="distraction" value="Shopping"> Shopping<br>
+      <input type="checkbox" name="distraction" value="IGTV"> IGTV<br>
+      <br>
+      <h2> How satisfied are you with the recommended content you see in Instagram (1 = Very unsatisfied & 5 = Very satisfied)? </h2>
+      <select name="rating">
+        <option value="rating0"> </option>
+        <option value="rating1">1</option>
+        <option value="rating2">2</option>
+        <option value="rating3">3</option>
+        <option value="rating4">4</option>
+        <option value="rating5">5</option>
+      </select>
+      <br>
+      <br>
+      <h2> Do you find Instagram easy to navigate? </h2>
+      <input type="text" name="navigation" required />
+      <br>
+      <br>
+      <h2> How often do you find yourself being interested by Instagram advertisements? </h2>
+      <select name="interested">
+        <option value="none"> </option>
+        <option value="never">Never</option>
+        <option value="notthatoften">Not That Often</option>
+        <option value="sometimes">Sometimes</option>
+        <option value="often">Often</option>
+        <option value="veryfrequently">Very Frequently</option>
+      </select>
+      <br>
+      <br>
+      <button type="submit" class="btn btn-warning" id="bb">Submit</button>
+      <p id="thanks"></p>
+    </form>
+    </div>
+	<script src="/assets/action.js"></script>
+  </body>
+</html> 

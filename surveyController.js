@@ -42,29 +42,32 @@ module.exports = function(app){
     // when a user goes to localhost:3000/analysis
     // serve a template (ejs file) which will include the data from the data files
     app.get('/analysis', function(req, res){
-        var color = readData("color");
-        var fruit = readData("fruit");
-        var animal = readData("animal");
-        res.render('showResults', {results: [color, fruit, animal]});
-        console.log([color, fruit, animal]);
+        var experience = readData("experience");
+        var feature = readData("feature");
+        var distraction = readData("distraction");
+        var rating = readData("rating");
+        var navigation = readData("navigation");
+        var interested = readData("interested");
+        res.render('showResults', {results: [experience, feature, distraction, rating, navigation, interested]});
+        console.log([experience, feature, distraction, rating, navigation, interested]);
     });
 
     // when a user goes to localhost:3000/niceSurvey
     // serve a static html (the survey itself to fill in)
-    app.get('/niceSurvey', function(req, res){
-        res.sendFile(__dirname+'/views/niceSurvey.html');
+    app.get('/instaSurvey', function(req, res){
+        res.sendFile(__dirname+'/views/instaSurvey.html');
     });
 
     // when a user types SUBMIT in localhost:3000/niceSurvey 
     // the action.js code will POST, and what is sent in the POST
     // will be recuperated here, parsed and used to update the data files
-    app.post('/niceSurvey', urlencodedParser, function(req, res){
+    app.post('/instaSurvey', urlencodedParser, function(req, res){
         console.log(req.body);
         var json = req.body;
         for (var key in json){
             console.log(key + ": " + json[key]);
             // in the case of checkboxes, the user might check more than one
-            if ((key === "color") && (json[key].length === 2)){
+            if ((key === "distraction") && (json[key].length === 2)){
                 for (var item in json[key]){
                     combineCounts(key, json[key][item]);
                 }
@@ -75,7 +78,7 @@ module.exports = function(app){
         }
         // mystery line... (if I take it out, the SUBMIT button does change)
         // if anyone can figure this out, let me know!
-        res.sendFile(__dirname + "/views/niceSurvey.html");
+        res.sendFile(__dirname + "/views/instaSurvey.html");
     });
     
 

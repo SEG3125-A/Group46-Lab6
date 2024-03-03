@@ -4,23 +4,41 @@
 </head>
 
 <body>
-    <h1>Survey analysis</h1>
-    <h2>Colors</h2>
+    <h1>Survey Analysis</h1>
+    <h2>What is your overall experience with the Instagram site, in detail?</h2>
     <ul>
     <% for (var i=0; i<results[0].length; i++){ %>
-        <li><%= results[0][i].color %> :  <%= results[0][i].count %></li>
+        <li><%= results[0][i].experience %> :  <%= results[0][i].experience %></li>
     <% } %>    
     </ul>
-    <h2>Fruits</h2>
+    <h2>What do you think is the most user-friendly instagram feature among the below three?</h2>
     <ul>
     <% for (var i=0; i<results[1].length; i++){ %>
-        <li><%= results[1][i].fruit %> :  <%= results[1][i].count %></li>
+        <li><%= results[1][i].feature %> :  <%= results[1][i].feature %></li>
     <% } %>    
     </ul>
-    <h2>Animals</h2>
+    <h2>Which of the following do you find to be distracting features in Instagram (you can choose multiple options)?</h2>
     <ul>
     <% for (var i=0; i<results[2].length; i++){ %>
-        <li><%= results[2][i].animal %> :  <%= results[2][i].count %></li>
+        <li><%= results[2][i].distraction %> :  <%= results[2][i].distraction %></li>
+    <% } %>    
+    </ul>
+    <h2>How satisfied are you with the recommended content you see in Instagram (1 = Very unsatisfied & 5 = Very satisfied)?</h2>
+    <ul>
+    <% for (var i=0; i<results[1].length; i++){ %>
+        <li><%= results[1][i].rating %> :  <%= results[1][i].rating %></li>
+    <% } %>    
+    </ul>
+    <h2>Do you find Instagram easy to navigate?</h2>
+    <ul>
+    <% for (var i=0; i<results[1].length; i++){ %>
+        <li><%= results[1][i].navigation %> :  <%= results[1][i].navigation %></li>
+    <% } %>    
+    </ul>
+    <h2>How often do you find yourself being interested by Instagram advertisements?</h2>
+    <ul>
+    <% for (var i=0; i<results[1].length; i++){ %>
+        <li><%= results[1][i].interested %> :  <%= results[1][i].interested %></li>
     <% } %>    
     </ul>
 </body>

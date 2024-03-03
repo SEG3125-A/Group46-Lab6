@@ -1,4 +1,3 @@
-// jQuery that will "listen" to the html niceSurvey.html
 $(document).ready(function(){
 
     $('form').on('submit', function(){
@@ -8,7 +7,7 @@ $(document).ready(function(){
   
         $.ajax({
           type: 'POST',
-          url: '/niceSurvey',
+          url: '/instaSurvey',
           data: $(this).serializeArray(),
           success: function(data){
             // do something with the data via front-end framework
