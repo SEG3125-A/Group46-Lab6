@@ -8,37 +8,37 @@
     <h2>What is your overall experience with the Instagram site, in detail?</h2>
     <ul>
     <% for (var i=0; i<results[0].length; i++){ %>
-        <li><%= results[0][i].q1 %></li>
+        <li><%= results[0][i].q1 %> :  <%= results[0][i].count %></li>
     <% } %>    
     </ul>
     <h2>What do you think is the most user-friendly instagram feature among the below three?</h2>
     <ul>
     <% for (var i=0; i<results[1].length; i++){ %>
-        <li><%= results[1][i].q2 %></li>
+        <li><%= results[1][i].q2 %> :  <%= results[0][i].count %></li>
     <% } %>    
     </ul>
     <h2>Which of the following do you find to be distracting features in Instagram (you can choose multiple options)?</h2>
     <ul>
     <% for (var i=0; i<results[2].length; i++){ %>
-        <li><%= results[2][i].q3 %></li>
+        <li><%= results[2][i].q3 %> :  <%= results[0][i].count %></li>
     <% } %>    
     </ul>
     <h2>How satisfied are you with the recommended content you see in Instagram (1 = Very unsatisfied & 5 = Very satisfied)?</h2>
     <ul>
     <% for (var i=0; i<results[3].length; i++){ %>
-        <li><%= results[3][i].q4 %></li>
+        <li><%= results[3][i].q4 %> :  <%= results[0][i].count %></li>
     <% } %>    
     </ul>
     <h2>Do you find Instagram easy to navigate?</h2>
     <ul>
     <% for (var i=0; i<results[4].length; i++){ %>
-        <li><%= results[4][i].q5 %></li>
+        <li><%= results[4][i].q5 %> :  <%= results[0][i].count %></li>
     <% } %>    
     </ul>
     <h2>How often do you find yourself being interested by Instagram advertisements?</h2>
     <ul>
     <% for (var i=0; i<results[5].length; i++){ %>
-        <li><%= results[5][i].q6 %></li>
+        <li><%= results[5][i].q6 %> :  <%= results[0][i].count %></li>
     <% } %>    
     </ul>
 </body>
