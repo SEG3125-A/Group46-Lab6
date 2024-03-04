@@ -10,15 +10,24 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
 
     <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+
+    <style>
+      .custom-background {
+        background-image: url('/views/bgimage.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    </style>
   </head>
   
   <body>
 	
-	<div class="container-md p-3 my-3 border bg-dark text-white" id="survey">
-    <h1>Survey</h1>
+	<div class="container-md p-3 my-3 border custom-background text-black" id="survey">
+    <h1 style="font-weight: bold;">Instagram Survey By Group 46</h1>
+    <br>
     <form>
       <h2> What is your overall experience with the Instagram site, in detail? </h2>
-      <input type="text" name="q1" required />
+      <input type="text" name="q1" placeholder="Type here..." required/>
       <br>
       <br>
       <h2> What do you think is the most user-friendly instagram feature among the below three? </h2>
@@ -45,7 +54,7 @@
       <br>
       <br>
       <h2> Do you find Instagram easy to navigate? </h2>
-      <input type="text" name="q5" required />
+      <input type="text" name="q5" placeholder="Type here..." required />
       <br>
       <br>
       <h2> How often do you find yourself being interested by Instagram advertisements? </h2>
