@@ -16,6 +16,8 @@ app.use(express.static('./public'));
 // fire function from surveyController
 surveyController(app);
 
+app.use('/images', express.static('images'))
+
 // listen to port
 app.listen(3000);
 console.log('listening port 3000');
